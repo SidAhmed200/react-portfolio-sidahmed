@@ -1,0 +1,53 @@
+/* =======================
+   About Section
+======================= */
+#about {
+  padding: 5% 10%;
+
+  h1 {
+    margin-bottom: 1rem;
+ /* couleur par défaut */
+  }
+
+  p {
+    margin-bottom: 2rem;
+    line-height: 1.6;
+ /* couleur par défaut */
+  }
+
+  button {
+    text-transform: none;
+  }
+}
+
+/* Dark Mode */
+body.dark {
+  #about {
+    h1 { color: #fff; }
+    p { color: #fff; } /* texte blanc en dark mode */
+  }
+
+  .about-section {
+    background-color: #0b0c16; /* fond sombre */
+    background-image: none; /* si bg-image gêne le contraste */
+
+    .content {
+      h1, p {
+        color: #fff; /* texte blanc */
+      }
+
+      .social_icons svg,
+      .mobile_social_icons svg {
+        color: #fff;
+      }
+    }
+
+    .image-wrapper img {
+      border: 2px solid #fff; /* contour pour mieux voir l'image */
+    }
+  }
+
+  .btn-contact { background: #0b0c16; color: #fff; &:hover { background: #121224; } }
+  .btn-cv { background: #0f1226; color: #fff; border: 1px solid rgba(255,255,255,0.06); &:hover { background: #151726; } }
+  .social-btn { background: #0f1226; color: #fff; &:hover { background: #1b1f3a; } }
+}

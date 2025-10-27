@@ -1,0 +1,99 @@
+/* =======================
+   Contact Form Buttons
+======================= */
+.contact_wrapper svg {
+  font-size: 1em;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.contact-form {
+  padding-top: 20px;
+
+  button {
+    background: #0f1226; /* bouton primaire sombre */
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 28px;
+    border-radius: 999px;
+    text-transform: none;
+    font-size: 1rem;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+    box-shadow: none;
+
+    &:hover {
+      background: #1b1f3a;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(11, 12, 30, 0.18);
+    }
+  }
+
+  fieldset {
+    background-color: white;
+  }
+}
+
+/* Labels & inputs */
+label {
+  font-size: 1.2rem;
+  font-family: 'DomaineDispNar-Medium', sans-serif;
+}
+
+.form-flex {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 15px;
+
+  .MuiFormControl-root {
+    width: 100%;
+  }
+}
+
+form {
+  width: 100% !important;
+}
+
+.body-form {
+  width: 100% !important;
+  margin-bottom: 15px !important;
+}
+
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
+  .contact-form button {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* =======================
+   Dark Mode
+======================= */
+body.dark {
+  .contact-form button {
+    background: #0b0c16;
+    color: #fff;
+
+    &:hover {
+      background: #121224;
+    }
+  }
+
+  fieldset {
+    background-color: #151726; /* champ du formulaire sombre */
+    border: 1px solid #333;
+  }
+
+  label {
+    color: #fff;
+  }
+}
