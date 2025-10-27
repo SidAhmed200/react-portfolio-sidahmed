@@ -22,11 +22,11 @@ The project focuses on productivity, minimal design, and seamless user experienc
     ],
     tech: ["React", "React Native", "Node.js", "MongoDB", "Firebase"],
     image: hokokiImage,
-    presentationLink: "https://link_to_hokoki_presentation.com",
+    presentationLink: "https://youtu.be/lppMmTFXSXw",
   },
   {
     title: "Gestion de Location de Véhicules",
-    description: `A complete vehicle rental management system developed with my teammates Nadjoua SAHNOUNE and Sidahmed Mekiri.
+    description: `A complete vehicle rental management system developed with my teammates Nadjoua SAHNOUNE and tamertbour nesrine .
 The system handles real-world vehicle rental operations efficiently, including user roles, vehicle management, client details, reservations, and reporting.`,
     features: [
       "User management with roles and permissions (admin, manager, client)",
@@ -36,7 +36,7 @@ The system handles real-world vehicle rental operations efficiently, including u
     ],
     tech: ["Java (Swing)", "JDBC", "MySQL (XAMPP)"],
     image: vehicleRentalImage,
-    presentationLink: "https://www.agrepe.com/images/_rac_Capture_search.jpg",
+    presentationLink: "https://www.linkedin.com/posts/nesrine-tamourtbir-2a21b1336_java-mysql-softwareengineering-ugcPost-7380964394198917121-c7fW?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEmkkYMBSNdztcMG6H4W2rTFDIVGRW9ISIk",
   },
   {
     title: "Hokoki AI Model",
@@ -51,7 +51,7 @@ It leverages modern machine learning techniques and real-time data analysis to a
     ],
     tech: ["Python", "TensorFlow", "scikit-learn", "Firebase", "Node.js"],
     image: hokokiAIImage,
-    presentationLink: "https://link_to_hokoki_ai_presentation.com",
+    presentationLink: "https://youtu.be/lppMmTFXSXw",
   },
 ];
 

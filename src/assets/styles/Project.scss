@@ -1,36 +1,45 @@
+/* Container principal des projets */
 .projects-container {
-  display: flex;
+  display: flex; /* Organise les enfants en colonne */
   flex-direction: column;
-  padding: 5% 10%;
-  text-align: left;
+  padding: 5% 10%; /* Marges internes autour du container */
+  text-align: left; /* Alignement du texte à gauche */
 }
 
+/* Grille des projets */
 .projects-container .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: 50px; /* Espacement entre les projets */
 }
 
+/* Chaque projet individuel */
 .projects-container .projects-grid .project {
   text-align: left;
 }
 
+/* Hover sur le titre du projet */
 .project h2:hover {
-  text-decoration: underline;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+  text-decoration: underline; /* Soulignement au survol */
+  transition: color 0.15s ease-in-out, 
+              background-color 0.15s ease-in-out, 
+              border-color 0.15s ease-in-out; /* Animation douce */
 }
 
+/* Effet zoom pour les images ou cartes */
 .zoom {
   border-radius: 5px;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s; /* Animation fluide */
   margin: 0 auto;
 }
 
+/* Hover pour agrandir et ombrer */
 .zoom:hover {
   transform: scale(1.05) translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Responsivité pour les petits écrans (<700px) */
 @media screen and (max-width: 700px) {
   .projects-container {
     display: block;
@@ -39,15 +48,15 @@
   }
 
   .projects-container .projects-grid {
-    display: block;
+    display: block; /* Passage de la grille à un bloc */
   }
 
   .projects-container .projects-grid .project {
-    padding-bottom: 5%;
+    padding-bottom: 5%; /* Espacement entre projets */
   }
 }
 
-/* Variables globales */
+/* Variables globales pour thèmes clair/sombre */
 :root {
   --bg: #f5f5f5;
   --text: #222;
@@ -61,6 +70,7 @@
   --btn-hover-alt: #6c63ff;
 }
 
+/* Variables pour le mode sombre */
 body.dark {
   --bg: #0d1117;
   --text: #e6edf3;
@@ -74,27 +84,30 @@ body.dark {
   --btn-hover-alt: #58a6ff;
 }
 
+/* Section des projets */
 .project-section {
   padding: 80px 10%;
   background-color: var(--bg);
   color: var(--text);
   text-align: center;
-  transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s; /* Animation lors du changement de thème */
 
   h2 {
     font-size: 2.2rem;
     margin-bottom: 40px;
     font-weight: 600;
-    color: var(--accent);
+    color: var(--accent); /* Couleur principale */
   }
 }
 
+/* Grille réactive des cartes projets */
 .project-grid {
   display: grid;
-  gap: 40px;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px; /* Espacement entre cartes */
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Colonnes auto-ajustables */
 }
 
+/* Carte projet individuelle */
 .project-card {
   background: var(--card-bg);
   color: var(--card-text);
@@ -104,14 +117,17 @@ body.dark {
   transition: transform 0.3s ease, background-color 0.3s, color 0.3s;
   position: relative;
 
+  /* Effet hover global de la carte */
   &:hover {
     transform: translateY(-10px);
 
+    /* Animation de l'image sur hover */
     .project-image {
       transform: translateY(-8px) scale(1.05);
       filter: brightness(1.1);
     }
 
+    /* Bouton "Présentation" sur hover */
     .btn-presentation {
       background-color: var(--btn-hover-alt);
       color: #fff;
@@ -120,6 +136,7 @@ body.dark {
     }
   }
 
+  /* Image du projet */
   .project-image {
     width: 100%;
     height: 220px;
@@ -130,6 +147,7 @@ body.dark {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
+  /* Contenu texte de la carte */
   .project-content {
     padding: 20px;
     text-align: left;
@@ -143,9 +161,10 @@ body.dark {
     p {
       font-size: 0.95rem;
       line-height: 1.6;
-      white-space: pre-line;
+      white-space: pre-line; /* Garde les retours à la ligne */
     }
 
+    /* Liste des fonctionnalités */
     .project-features {
       margin: 10px 0;
       padding-left: 20px;
@@ -156,6 +175,7 @@ body.dark {
       }
     }
 
+    /* Technologies utilisées */
     .project-tech {
       margin-top: 10px;
       display: flex;
@@ -172,6 +192,7 @@ body.dark {
       }
     }
 
+    /* Bouton pour voir la démo / présentation */
     .btn-presentation {
       display: inline-block;
       margin-top: 15px;
