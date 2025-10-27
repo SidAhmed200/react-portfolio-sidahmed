@@ -1,24 +1,23 @@
-import React, { useState, useEffect } from "react";
+// App.tsx
+import React, { useEffect, useState } from "react";
 import {
   Main,
   Timeline,
   Expertise,
   Project,
   Contact,
+  Navigation,
   Footer,
 } from "./components";
 import FadeIn from "./components/FadeIn";
-import About from "./components/About";
-import Navigation from "./components/Navigation";
 import "./index.scss";
-
-type Mode = "light" | "dark";
+import About from "./components/About";
 
 function App() {
-  const [mode, setMode] = useState<Mode>("dark");
+  const [mode, setMode] = useState<"light" | "dark">("dark"); // ⚡ type strict
 
   const handleModeChange = () => {
-    setMode(prev => (prev === "dark" ? "light" : "dark"));
+    setMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   useEffect(() => {
@@ -26,7 +25,7 @@ function App() {
   }, []);
 
   return (
-    <div className={`main-container ${mode}`}>
+    <div className={`main-container ${mode === "dark" ? "dark-mode" : "light-mode"}`}>
       <Navigation parentToChild={{ mode }} modeChange={handleModeChange} />
       <FadeIn transitionDuration={700}>
         <Main />
